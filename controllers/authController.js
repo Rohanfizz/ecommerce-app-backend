@@ -104,7 +104,6 @@ exports.restrictTo = (...roles) => {
 };
 
 exports.signup = catchAsync(async (req, res, next) => {
-    console.log('im here');
     const newUser = await User.create({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -117,7 +116,6 @@ exports.signup = catchAsync(async (req, res, next) => {
 
 exports.login = catchAsync(async (req, res, next) => {
     const { email, password } = req.body;
-
     //1) Check if email and password exist
     if (!email || !password) {
         return next(new AppError("Please provide email and password!", 400));
@@ -127,7 +125,7 @@ exports.login = catchAsync(async (req, res, next) => {
     if (!user || !(await user.correctPassword(password, user.password))) {
         return next(new AppError("Incorrect email or password!", 401));
     }
-
+    
     // 3) send token if everything alright
     createSendToken(user, 200, res);
 });
