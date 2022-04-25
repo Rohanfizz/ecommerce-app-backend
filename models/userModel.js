@@ -1,54 +1,64 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
-const bcrypt = require("bcrypt");   
-const crypto = require("crypto");   
+const bcrypt = require("bcrypt");
+const crypto = require("crypto");
+const { v4 } = require("uuid");
+const essentialSchema = require("./essentialSchema");
 
-const userSchema = new mongoose.Schema({
-    firstName: {
-        type: String,
-        required: [true, "Please tell us your first name!"],
-    },
-    lastName: {
-        type: String,
-    },
-    email: {
-        type: String,
-        required: [true, "Please provide us your email"],
-        unique: true,
-        lowercase: true,
-        validate: [validator.isEmail, "Please provide a valid email"],
-    },
-    photo: String,
-    role: {
-        type: String,
-        enum: ["user", "seller", "admin"],
-        default: "user",
-    },
-    password: {
-        type: String,
-        required: [true, "Please provide a password"],
-        minlength: 8,
-        select: false,
-    },
-    passwordConfirm: {
-        type: String,
-        required: [true, "Please confirm your password"],
-        validate: {
-            validator: function (el) {
-                return el === this.password;
-            },
-            message: "Passwords are not the same!",
+const userSchema = new mongoose.Schema(
+    {
+        ...essentialSchema.obj,
+        firstName: {
+            type: String,
+            required: [true, "Please tell us your first name!"],
         },
+        lastName: {
+            type: String,
+        },
+        email: {
+            type: String,
+            required: [true, "Please provide us your email"],
+            unique: true,
+            lowercase: true,
+            validate: [validator.isEmail, "Please provide a valid email"],
+        },
+        photo: String,
+        role: {
+            type: String,
+            enum: ["user", "seller", "admin"],
+            default: "user",
+        },
+        password: {
+            type: String,
+            required: [true, "Please provide a password"],
+            minlength: 8,
+            select: false,
+        },
+        passwordConfirm: {
+            type: String,
+            required: [true, "Please confirm your password"],
+            validate: {
+                validator: function (el) {
+                    return el === this.password;
+                },
+                message: "Passwords are not the same!",
+            },
+        },
+        passwordChangedAt: Date,
+        passwordResetToken: String,
+        passwordResetExpired: Date,
     },
-    passwordChangedAt: Date,
-    passwordResetToken: String,
-    passwordResetExpired: Date,
-    active: {
-        type: Boolean,
-        default: true,
-        select: false,
-    },
-});
+    {
+        toJSON: {
+            virtuals: true,
+            transform: function (doc, ret) {
+                // ret._id = ret._id;
+                delete ret._id;
+            },
+        },
+        toObject: { virtuals: true },
+    }
+);
 
 userSchema.pre("save", async function (next) {
     //Only run this function if password was actually modified
