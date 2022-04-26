@@ -37,6 +37,7 @@ const userSchema = new mongoose.Schema(
         passwordConfirm: {
             type: String,
             required: [true, "Please confirm your password"],
+            select:false,
             validate: {
                 validator: function (el) {
                     return el === this.password;
@@ -51,10 +52,10 @@ const userSchema = new mongoose.Schema(
     {
         toJSON: {
             virtuals: true,
-            transform: function (doc, ret) {
-                // ret._id = ret._id;
-                delete ret._id;
-            },
+            // transform: function (doc, ret) {
+            //     // ret._id = ret._id;
+            //     delete ret._id;
+            // },
         },
         toObject: { virtuals: true },
     }

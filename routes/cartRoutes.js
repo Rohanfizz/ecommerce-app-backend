@@ -1,10 +1,11 @@
 const express = require("express");
 const { protect } = require("../controllers/authController");
-const { cartUpdate } = require("../controllers/cartController");
+const { cartUpdate, createCart,  getUserCart } = require("../controllers/cartController");
 
 const cartRouter = express.Router();
 
-cartRouter.patch("/update",protect, cartUpdate);
-
+cartRouter.get("/",protect,getUserCart);
+cartRouter.post("/create", protect, createCart);
+cartRouter.patch("/update", protect, cartUpdate);
 
 module.exports = cartRouter;

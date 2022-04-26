@@ -1,7 +1,9 @@
-const { default: mongoose } = require("mongoose");
+const mongoose = require("mongoose");
+const essentialSchema = require("./essentialSchema");
 
 const productSchema = new mongoose.Schema(
     {
+        ...essentialSchema.obj,
         name: {
             type: String,
             required: [true, "A product must have a name!"],
@@ -27,7 +29,7 @@ const productSchema = new mongoose.Schema(
         },
         originalPrice: {
             type: Number,
-            required: [true, "A Product must have a price!"],
+            required: [true, "A Product must have a Original price!"],
             validate: {
                 validator: function (val) {
                     return val >= this.price;
@@ -58,6 +60,7 @@ const productSchema = new mongoose.Schema(
             type: mongoose.SchemaTypes.Mixed,
             required: [true, "A product must have Info"],
         },
+        tags: [String],
     },
     {
         toJSON: { virtuals: true },
@@ -70,6 +73,6 @@ const productSchema = new mongoose.Schema(
 //     foreignField: 'tour',
 //     localField: '_id',
 //   });
-  
+
 const Product = mongoose.model("Product", productSchema);
 module.exports = Product;

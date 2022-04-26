@@ -7,6 +7,7 @@ const cartSchema = new mongoose.Schema(
         userId: {
             type: String,
             required: [true, "Please provide a userId for the cart"],
+            unique: true,
         },
         products: [
             {
@@ -19,13 +20,7 @@ const cartSchema = new mongoose.Schema(
         ],
     },
     {
-        toJSON: {
-            virtuals: true,
-            transform: function (doc, ret) {
-                // ret._id = ret._id;
-                delete ret._id;
-            },
-        },
+        toJSON: { virtuals: true },
         toObject: { virtuals: true },
     }
 );
@@ -33,8 +28,13 @@ const cartSchema = new mongoose.Schema(
 cartSchema.pre(/^find/, function (next) {
     this.populate({
         path: "products",
-        select: { price: 1, name: 1, productImage: 1, _id: 1 },
+        populate: {
+            path: "product",
+            // select: "-info -description -__v -active -createdAt -benefits -suggestedUse",
+            select: { price: 1, name: 1, _id: 1, uuid: 1 },
+        },
     });
+    next();
 });
 
 const Cart = mongoose.model("Cart", cartSchema);
