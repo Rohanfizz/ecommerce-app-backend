@@ -1,4 +1,5 @@
 const { default: mongoose } = require("mongoose");
+const Product = require("./productModel");
 const essentialSchema = require("./essentialSchema");
 
 const cartSchema = new mongoose.Schema(
@@ -18,6 +19,11 @@ const cartSchema = new mongoose.Schema(
                 },
             },
         ],
+        subtotal: {
+            type: Number,
+            default: 0,
+            required: [true, "A cart must have a subtotal"],
+        },  
     },
     {
         toJSON: { virtuals: true },
@@ -30,8 +36,7 @@ cartSchema.pre(/^find/, function (next) {
         path: "products",
         populate: {
             path: "product",
-            // select: "-info -description -__v -active -createdAt -benefits -suggestedUse",
-            select: { price: 1, name: 1, _id: 1, uuid: 1 },
+            select: { price: 1, name: 1, _id: 1, uuid: 1, productImage: 1 },
         },
     });
     next();

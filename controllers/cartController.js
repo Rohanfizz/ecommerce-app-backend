@@ -5,17 +5,20 @@ const { getOne } = require("./handleFactory");
 
 exports.getUserCart = catchAsync(async (req, res, next) => {
     const userId = req.user.id;
-    let cart = await Cart.findOne({ userId });
+    let cart = await Cart.findOne({ userId })
 
     if (!cart) {
         cart = await Cart.create({
             userId,
             products: req.body.products,
+            subtotal: req.body.subtotal,
         });
     }
-    cart.products = cart.products.filter((product) => {
-        return product.product != null;
-    });
+    // console.log(cart);
+    // cart.products = cart.products.filter((product) => {      // if no product is available
+    //     return product.product != null;
+    // });
+    // console.log(cart);
 
     await Cart.findByIdAndUpdate(cart._id, cart, {
         new: true,
@@ -35,6 +38,7 @@ exports.createCart = catchAsync(async (req, res, next) => {
     const newCart = await Cart.create({
         userId,
         products: req.body.products,
+        subtotal: req.body.subtotal,
     });
     console.log(newCart);
     res.status(201).json({
@@ -46,20 +50,19 @@ exports.createCart = catchAsync(async (req, res, next) => {
 });
 
 exports.cartUpdate = catchAsync(async (req, res, next) => {
-    console.log("asdjghkkkkkkkkkkkkkkkkkdfahjgkafsdhjgkafdshgjkasdfhgjhja");
     let userId = req.user.id;
     let cart = await Cart.findOneAndUpdate(
         { userId },
-        { products: req.body.products }
+        { products: req.body.products, subtotal: req.body.subtotal }
     );
-
+    
     if (!cart) {
         cart = await Cart.create({
             userId,
             products: req.body.products,
         });
     }
-    
+
     res.status(200).json({
         status: "success",
         data: {
