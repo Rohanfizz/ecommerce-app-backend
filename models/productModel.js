@@ -38,10 +38,19 @@ const productSchema = new mongoose.Schema(
                     "Oriinal price should be equal to or above regular price",
             },
         },
+        tax: {
+            type: Number,
+            required: [true, "A Product must have a Tax price!"],
+        },
         stockStatus: {
             type: Boolean,
             default: true,
             required: [true, "A product must have stock status"],
+        },
+        stock: {
+            type: Number,
+            default: 0,
+            required: [true, "A product must have a stock"],
         },
         productImage: [String],
         description: {

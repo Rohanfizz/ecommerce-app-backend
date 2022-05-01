@@ -4,7 +4,7 @@ const { v4 } = require("uuid");
 const essentialSchema = new mongoose.Schema({
     uuid: {
         type: String,
-        default: v4(),
+        default: ()=>v4(),
         unique: true,
     },
     active: {

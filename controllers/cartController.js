@@ -40,7 +40,6 @@ exports.createCart = catchAsync(async (req, res, next) => {
         products: req.body.products,
         subtotal: req.body.subtotal,
     });
-    console.log(newCart);
     res.status(201).json({
         status: "success",
         data: {

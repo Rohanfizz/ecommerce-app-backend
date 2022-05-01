@@ -36,7 +36,7 @@ cartSchema.pre(/^find/, function (next) {
         path: "products",
         populate: {
             path: "product",
-            select: { price: 1, name: 1, _id: 1, uuid: 1, productImage: 1 },
+            select: { price: 1, name: 1, _id: 1, uuid: 1, productImage: 1,tax:1 },
         },
     });
     next();
