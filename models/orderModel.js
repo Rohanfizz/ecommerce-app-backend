@@ -49,14 +49,15 @@ const orderSchema = new mongoose.Schema(
         orderStatus: {
             type: String,
             enum: [
-                "placed",
-                "cancelled",
-                "dispatched",
-                "completed",
-                "refunded",
-                "failed",
+                "Placed",
+                "Approved",
+                "Processing",
+                "Dispatched",
+                "Out For Delivery",
+                "Delivered",
+                "Cancelled",
             ],
-            default: "placed",
+            default: "Placed",
         },
         paymentDone: {
             type: Boolean,
@@ -104,8 +105,10 @@ const orderSchema = new mongoose.Schema(
         },
         invoice: {
             type: String,
-            default: () => {return new ShortUniqueId({length: 5})()},
-        },  
+            default: () => {
+                return new ShortUniqueId({ length: 5 })();
+            },
+        },
     },
     {
         toJSON: {

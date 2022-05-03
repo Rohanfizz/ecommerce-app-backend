@@ -1,0 +1,35 @@
+{
+    "from": "LukGud Co.",
+    "to": "Rohan Sharma",
+    "logo": "https://static.libnet.info/images/events/dekalb/Flower_Hunt.jpg",
+    "number": "1bacbs",
+    "fields": {
+        "tax": "true",
+        "discounts": false,
+        "shipping": true
+    },
+    "tax": 7,
+    "shipping": 15,
+    "items": [
+        {
+            "name": "Starter plan",
+            "quantity": 1,
+            "unit_cost": 99
+        }
+    ],
+    "notes": "Thanks for your business!",
+    "custom_fields": [
+        {
+            "name": "Address",
+            "value": "C-161 Pusnpanjali Enclave"
+        },
+        {
+            "name": "City",
+            "value": "Delhi"
+        },
+        {
+            "name": "Zip Code",
+            "value": "110034"
+        }
+    ]
+}
