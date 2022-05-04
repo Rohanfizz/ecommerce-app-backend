@@ -23,8 +23,12 @@
         "validator": "^13.7.0"
     },
     "scripts": {
-        "start": "nodemon -x 'clear;node' server.js",
+        "start": "node server.js",
+        "dev": "nodemon -x 'clear;node' server.js",
         "start:prod": "NODE_ENV=production nodemon -x 'clear;node' server.js",
         "debug": "ndb server.js"
+    },
+    "engines": {
+        "node":">=10.0.0"
     }
 }
