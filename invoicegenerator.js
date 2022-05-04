@@ -60,7 +60,7 @@ var invoice = {
 };
 
 generateInvoice(invoice, 'invoice.pdf', function() {
-    console.log("Saved invoice to invoice.pdf");
+    // console.log("Saved invoice to invoice.pdf");
 }, function(error) {
     console.error(error);
 });

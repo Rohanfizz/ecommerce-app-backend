@@ -31,9 +31,9 @@ const sendEmail = async (options) => {
     };
 
     //   3) Actually send the email
-    console.log("now sending");
+    // console.log("now sending");
     await mailTransporter.sendMail(mailOptions);
-    console.log("sent");
+    // console.log("sent");
 };
 
 module.exports = sendEmail;

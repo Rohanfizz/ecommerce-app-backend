@@ -50,4 +50,4 @@ if (process.argv[2] === "--import") {
     importData();
 } else deleteData();
 
-console.log(process.argv);
+// console.log(process.argv);
