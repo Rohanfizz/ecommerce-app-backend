@@ -5,7 +5,7 @@ const Product = require("../models/productModel");
 
 dotenv.config({ path: "../config.env" });
 
-const DB = process.env.DATABASE_DEV.replace(
+const DB = process.env.DATABASE_PROD.replace(
     "<PASSWORD>",
     process.env.DATABASE_PASSWORD
 );

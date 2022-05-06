@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const essentialSchema = require("./essentialSchema");
-
+const validator = require('validator');
 const messageSchema = new mongoose.Schema({
     ...essentialSchema.obj,
     fullName: {
@@ -31,4 +31,4 @@ const messageSchema = new mongoose.Schema({
 
 
 const Message = mongoose.model("Message", messageSchema);
-module.exports = Order;
+module.exports = Message;
