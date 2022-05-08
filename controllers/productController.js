@@ -36,11 +36,11 @@ exports.searchSuggestions = catchAsync(async (req, res, next) => {
             {
                 $project: {
                     name: 1,
-                    _id:0
+                    _id: 0,
                 },
             },
         ]);
-        let resArray = result.map(obj=>obj.name);
+        let resArray = result.map((obj) => obj.name);
         res.status(200).json({
             status: "success",
             body: {

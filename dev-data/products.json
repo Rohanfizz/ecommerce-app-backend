@@ -1,14 +1,91 @@
 [
     {
-        "name": "Makeup Revolution Maxi Reloaded Palette Large It Up, Multicolor, 60 g",
-        "primaryCategory": "Spray",
-        "ratingNumber": 3,
-        "ratingQuantity": 264,
-        "price": 1299,
-        "tax":19.4,
+        "name": "Park Avenue Euphoria Eau De Parfum For Men, 100ml ",
+        "primaryCategory": "Perfume",
+        "ratingNumber": 4,
+        "reviewCount": 264,
+        "price": 1799,
+        "tax": 19.4,
         "originalPrice": "1999",
         "stockStatus": true,
-        "stock":10,
+        "stock": 10,
+        "productImage": [
+            "https://m.media-amazon.com/images/I/61TlWuB9G-L._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/41oIYnXMRLL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61U4GtJ1opL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61Shm05igRL._SL1000_.jpg"
+        ],
+        "tags": [
+            "cosmetics",
+            "makeup",
+            "lipstick",
+            "red",
+            "blue",
+            "mayblene",
+            "loreal"
+        ],
+        "description": "Herb Enriched Ayurvedic Lipstick Shade Sampler Kit is a miniature pack of 16 ayurvedic shades specially curated for you to test out the stay, texture and find a perfect shade to look your best. It is made by cutting out unnecessary ingredients from the formula while making it as wholesome as possible without compromising on the ‘glam’ factor.",
+        "benefits": "Ayurvedic & natural formula. Natural ingredients provide moisture & nourishment to your lips. Made from Vata pacifying herbs such Indian Bhrami, Guduchi, Yashtimadhu, Bala and Manjishtha in a base of Ghee and sesame oil. It does not contain artificial pigments, made from natural pigments. Free from harmful chemicals, silicones, synthetic film-formers & parabens.",
+        "suggestedUse": "Glide onto lips, starting from the center and blending outward",
+        "info": {
+            "Brand": "Just Herbs",
+            "Color": "Yellow",
+            "Skin Type": "All",
+            "Item Form": "Stick",
+            "Finish Type": "Matte",
+            "Material Type": "Paraben And Synthetic Film-formers Free",
+            "Coverage": "Medium",
+            "Age Range": "Adult"
+        }
+    },
+    {
+        "name": "Olay Day Cream: Natural White Instant with UV Protection, 40g ",
+        "primaryCategory": "Cream",
+        "ratingNumber": 4,
+        "reviewCount": 264,
+        "price": 249,
+        "tax": 19.4,
+        "originalPrice": "1999",
+        "stockStatus": true,
+        "stock": 10,
+        "productImage": [
+            "https://m.media-amazon.com/images/I/61zD2yW8M-L._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/6102e4g8YdL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61hi+CCjA7L._SL1500_.jpg"
+        ],
+        "tags": [
+            "cosmetics",
+            "makeup",
+            "lipstick",
+            "red",
+            "blue",
+            "mayblene",
+            "loreal"
+        ],
+        "description": "Herb Enriched Ayurvedic Lipstick Shade Sampler Kit is a miniature pack of 16 ayurvedic shades specially curated for you to test out the stay, texture and find a perfect shade to look your best. It is made by cutting out unnecessary ingredients from the formula while making it as wholesome as possible without compromising on the ‘glam’ factor.",
+        "benefits": "Ayurvedic & natural formula. Natural ingredients provide moisture & nourishment to your lips. Made from Vata pacifying herbs such Indian Bhrami, Guduchi, Yashtimadhu, Bala and Manjishtha in a base of Ghee and sesame oil. It does not contain artificial pigments, made from natural pigments. Free from harmful chemicals, silicones, synthetic film-formers & parabens.",
+        "suggestedUse": "Glide onto lips, starting from the center and blending outward",
+        "info": {
+            "Brand": "Just Herbs",
+            "Color": "Yellow",
+            "Skin Type": "All",
+            "Item Form": "Stick",
+            "Finish Type": "Matte",
+            "Material Type": "Paraben And Synthetic Film-formers Free",
+            "Coverage": "Medium",
+            "Age Range": "Adult"
+        }
+    },
+    {
+        "name": "Makeup Revolution Maxi Reloaded Palette Large It Up, Multicolor, 60 g",
+        "primaryCategory": "Highlighter",
+        "ratingNumber": 3,
+        "ratingQuantity": 264,
+        "price": 899,
+        "tax": 19.4,
+        "originalPrice": "1999",
+        "stockStatus": true,
+        "stock": 10,
         "productImage": [
             "https://m.media-amazon.com/images/I/91zfFbCp7eL._AC_UL320_.jpg",
             "https://m.media-amazon.com/images/I/91XD5PkJVgL._AC_UL320_.jpg",
@@ -38,20 +115,20 @@
         }
     },
     {
-        "name": "Revolution Maxi Reloaded Palette Large It Up, Multicolor, 60 g",
-        "primaryCategory": "Spray",
+        "name": "Villain Perfume For Men 100 Ml - Eau De Parfum - Premium Long Lasting Fragrance Spray - Woody & Spicy ",
+        "primaryCategory": "Perfume",
         "ratingNumber": 4,
-        "ratingQuantity": 264,
-        "price": 1299,
-        "tax":19.4,
-        "originalPrice": "1999",
+        "ratingQuantity": 2999,
+        "price": 4599,
+        "tax": 19.4,
+        "originalPrice": "8999",
 
         "stockStatus": true,
-        "stock":10,
+        "stock": 10,
         "productImage": [
-            "https://m.media-amazon.com/images/I/51gxFVB9xvL._AC_UL320_.jpg",
-            "https://m.media-amazon.com/images/I/91XD5PkJVgL._AC_UL320_.jpg",
-            "https://m.media-amazon.com/images/I/91KeBvIAECL._AC_UL320_.jpg"
+            "https://m.media-amazon.com/images/I/61LL68H0ymL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61-8e-SZmWL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/51sPNkOeZHL._SL1080_.jpg"
         ],
         "tags": [
             "cosmetics",
@@ -81,11 +158,11 @@
         "primaryCategory": "Spray",
         "ratingNumber": 4,
         "reviewCount": 264,
-        "price": 1299,
-        "tax":19.4,
+        "price": 599,
+        "tax": 19.4,
         "originalPrice": "1999",
         "stockStatus": false,
-        "stock":10,
+        "stock": 10,
         "productImage": [
             "https://m.media-amazon.com/images/I/61Df6Ww6DaL._AC_UL320_.jpg",
             "https://m.media-amazon.com/images/I/91XD5PkJVgL._AC_UL320_.jpg",
@@ -115,19 +192,19 @@
         }
     },
     {
-        "name": "Palette Large It Up, Multicolor, 60 g",
-        "primaryCategory": "Spray",
+        "name": "Maybelline New York Colossal Bold Eyeliner, Black, 3g",
+        "primaryCategory": "Eyeliner",
         "ratingNumber": 4,
         "reviewCount": 264,
-        "price": 1299,
-        "tax":19.4,
+        "price": 369,
+        "tax": 19.4,
         "originalPrice": "1999",
         "stockStatus": true,
-        "stock":10,
+        "stock": 10,
         "productImage": [
-            "https://m.media-amazon.com/images/I/41OrDHmQLVL._AC_UL320_.jpg",
-            "https://m.media-amazon.com/images/I/91XD5PkJVgL._AC_UL320_.jpg",
-            "https://m.media-amazon.com/images/I/91KeBvIAECL._AC_UL320_.jpg"
+            "https://m.media-amazon.com/images/I/71IzuBi4cFL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71wL2eWgmnL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81aTdzdJSxL._SL1500_.jpg"
         ],
         "tags": [
             "cosmetics",
@@ -154,14 +231,14 @@
     },
     {
         "name": "Colorbar Cosmetics Luminous Rose Boosting Oil, 35 ml",
-        "primaryCategory": "Spray",
+        "primaryCategory": "Lipstick",
         "ratingNumber": 4,
         "reviewCount": 264,
-        "price": 1299,
-        "tax":19.4,
-        "originalPrice": "1999",
+        "price": 2229,
+        "tax": 19.4,
+        "originalPrice": "3999",
         "stockStatus": true,
-        "stock":10,
+        "stock": 10,
         "productImage": [
             "https://m.media-amazon.com/images/I/6156PYm5hWL._SL1500_.jpg",
             "https://m.media-amazon.com/images/I/91XD5PkJVgL._AC_UL320_.jpg",
@@ -192,14 +269,14 @@
     },
     {
         "name": "Fixderma Cosmetic Laboratories Fcl Aha Lightening Gel Hq, Fast Acting Skin Lightening Gel, Age Spot Serum, Treats Uneven Skin Tone, Freckles, Hyperpigmentation, Lighter Skin Tone, Night Serum, 30Ml ",
-        "primaryCategory": "Spray",
+        "primaryCategory": "Foundation",
         "ratingNumber": 4,
         "reviewCount": 264,
-        "price": 1299,
-        "tax":19.4,
+        "price": 399,
+        "tax": 19.4,
         "originalPrice": "1999",
         "stockStatus": true,
-        "stock":10,
+        "stock": 10,
         "productImage": [
             "https://m.media-amazon.com/images/I/51JsOvEbnIS._SL1080_.jpg",
             "https://m.media-amazon.com/images/I/91XD5PkJVgL._AC_UL320_.jpg",
@@ -230,14 +307,14 @@
     },
     {
         "name": "Insight Cosmetics Pro Concealer Palette - Corrector, 15gm ",
-        "primaryCategory": "Spray",
+        "primaryCategory": "Highlighter",
         "ratingNumber": 3,
         "reviewCount": 264,
-        "price": 1299,
-        "tax":19.4,
+        "price": 199,
+        "tax": 19.4,
         "originalPrice": "1999",
         "stockStatus": true,
-        "stock":10,
+        "stock": 10,
         "productImage": [
             "https://m.media-amazon.com/images/I/61GC25GTmPL._SL1440_.jpg",
             "https://m.media-amazon.com/images/I/91XD5PkJVgL._AC_UL320_.jpg",
@@ -267,17 +344,17 @@
         }
     },
     {
-        "name": "Makeup Revolution Maxi Reloaded Palette Large It Up, Multicolor, 60 g",
+        "name": "Swiss Beauty Makeup Fixer Natural Aloe Vera With Vitamin-E, Face Makeup, White, 70Ml ",
         "primaryCategory": "Spray",
         "ratingNumber": 4,
         "reviewCount": 264,
-        "price": 1299,
-        "tax":19.4,
+        "price": 799,
+        "tax": 19.4,
         "originalPrice": "1999",
         "stockStatus": true,
-        "stock":10,
+        "stock": 10,
         "productImage": [
-            "https://m.media-amazon.com/images/I/51gxFVB9xvL._AC_UL320_.jpg",
+            "https://m.media-amazon.com/images/I/51vOm41X9fL._SL1000_.jpg",
             "https://m.media-amazon.com/images/I/91XD5PkJVgL._AC_UL320_.jpg",
             "https://m.media-amazon.com/images/I/91KeBvIAECL._AC_UL320_.jpg"
         ],
@@ -306,14 +383,14 @@
     },
     {
         "name": "LAKMÉ 9 to 5 Primer + Matte Lip Color Matte Finish, MR1 Red Letter, 3.6 g ",
-        "primaryCategory": "Spray",
+        "primaryCategory": "Lipstick",
         "ratingNumber": 4,
         "reviewCount": 264,
-        "price": 1299,
-        "tax":19.4,
-        "originalPrice": "1999",
+        "price": 4999,
+        "tax": 19.4,
+        "originalPrice": 6999,
         "stockStatus": false,
-        "stock":10,
+        "stock": 10,
         "productImage": [
             "https://m.media-amazon.com/images/I/51HXxC5pwIL._SL1000_.jpg",
             "https://m.media-amazon.com/images/I/91XD5PkJVgL._AC_UL320_.jpg",
@@ -343,95 +420,19 @@
         }
     },
     {
-        "name": "Makeup Revolution Maxi Reloaded Palette Large It Up, Multicolor, 60 g",
-        "primaryCategory": "Spray",
+        "name": "Lakmé 9To5 Naturale Gel Makeup Remover, 50 ml",
+        "primaryCategory": "Cream",
         "ratingNumber": 4,
         "reviewCount": 264,
-        "price": 1299,
-        "tax":19.4,
-        "originalPrice": "1999",
+        "price": 3599,
+        "tax": 19.4,
+        "originalPrice": 5999,
         "stockStatus": true,
-        "stock":10,
+        "stock": 10,
         "productImage": [
-            "https://m.media-amazon.com/images/I/41OrDHmQLVL._AC_UL320_.jpg",
-            "https://m.media-amazon.com/images/I/91XD5PkJVgL._AC_UL320_.jpg",
-            "https://m.media-amazon.com/images/I/91KeBvIAECL._AC_UL320_.jpg"
-        ],
-        "tags": [
-            "cosmetics",
-            "makeup",
-            "lipstick",
-            "red",
-            "blue",
-            "mayblene",
-            "loreal"
-        ],
-        "description": "Herb Enriched Ayurvedic Lipstick Shade Sampler Kit is a miniature pack of 16 ayurvedic shades specially curated for you to test out the stay, texture and find a perfect shade to look your best. It is made by cutting out unnecessary ingredients from the formula while making it as wholesome as possible without compromising on the ‘glam’ factor.",
-        "benefits": "Ayurvedic & natural formula. Natural ingredients provide moisture & nourishment to your lips. Made from Vata pacifying herbs such Indian Bhrami, Guduchi, Yashtimadhu, Bala and Manjishtha in a base of Ghee and sesame oil. It does not contain artificial pigments, made from natural pigments. Free from harmful chemicals, silicones, synthetic film-formers & parabens.",
-        "suggestedUse": "Glide onto lips, starting from the center and blending outward",
-        "info": {
-            "Brand": "Just Herbs",
-            "Color": "Yellow",
-            "Skin Type": "All",
-            "Item Form": "Stick",
-            "Finish Type": "Matte",
-            "Material Type": "Paraben And Synthetic Film-formers Free",
-            "Coverage": "Medium",
-            "Age Range": "Adult"
-        }
-    },
-    {
-        "name": "Makeup Revolution Maxi Reloaded Palette Large It Up, Multicolor, 60 g",
-        "primaryCategory": "Spray",
-        "ratingNumber": 4,
-        "reviewCount": 264,
-        "price": 1299,
-        "tax":19.4,
-        "originalPrice": "1999",
-        "stockStatus": true,
-        "stock":10,
-        "productImage": [
-            "https://m.media-amazon.com/images/I/71nfJ8FSVjS._AC_UL320_.jpg",
-            "https://m.media-amazon.com/images/I/91XD5PkJVgL._AC_UL320_.jpg",
-            "https://m.media-amazon.com/images/I/91KeBvIAECL._AC_UL320_.jpg"
-        ],
-        "tags": [
-            "cosmetics",
-            "makeup",
-            "lipstick",
-            "red",
-            "blue",
-            "mayblene",
-            "loreal"
-        ],
-        "description": "Herb Enriched Ayurvedic Lipstick Shade Sampler Kit is a miniature pack of 16 ayurvedic shades specially curated for you to test out the stay, texture and find a perfect shade to look your best. It is made by cutting out unnecessary ingredients from the formula while making it as wholesome as possible without compromising on the ‘glam’ factor.",
-        "benefits": "Ayurvedic & natural formula. Natural ingredients provide moisture & nourishment to your lips. Made from Vata pacifying herbs such Indian Bhrami, Guduchi, Yashtimadhu, Bala and Manjishtha in a base of Ghee and sesame oil. It does not contain artificial pigments, made from natural pigments. Free from harmful chemicals, silicones, synthetic film-formers & parabens.",
-        "suggestedUse": "Glide onto lips, starting from the center and blending outward",
-        "info": {
-            "Brand": "Just Herbs",
-            "Color": "Yellow",
-            "Skin Type": "All",
-            "Item Form": "Stick",
-            "Finish Type": "Matte",
-            "Material Type": "Paraben And Synthetic Film-formers Free",
-            "Coverage": "Medium",
-            "Age Range": "Adult"
-        }
-    },
-    {
-        "name": "Makeup Revolution Maxi Reloaded Palette Large It Up, Multicolor, 60 g",
-        "primaryCategory": "Spray",
-        "ratingNumber": 4,
-        "reviewCount": 264,
-        "price": 1299,
-        "tax":19.4,
-        "originalPrice": "1999",
-        "stockStatus": true,
-        "stock":10,
-        "productImage": [
-            "https://m.media-amazon.com/images/I/51LPLkySP2S._SL1000_.jpg",
-            "https://m.media-amazon.com/images/I/91XD5PkJVgL._AC_UL320_.jpg",
-            "https://m.media-amazon.com/images/I/91KeBvIAECL._AC_UL320_.jpg"
+            "https://m.media-amazon.com/images/I/51PMBrWPodL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/41W-bshX59L.jpg",
+            "https://m.media-amazon.com/images/I/51h-3-192zL._SL1000_.jpg"
         ],
         "tags": [
             "cosmetics",
