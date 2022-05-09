@@ -218,3 +218,7 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
 
     createSendToken(user, 200, res);
 });
+
+exports.userValidator = catchAsync(async (req,res,next)=>{
+    createSendToken(req.user,200,res);
+})

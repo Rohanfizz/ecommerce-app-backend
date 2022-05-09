@@ -88,6 +88,7 @@ exports.getAll = (Model) =>
             doc = values[0];
             total = values[1];
         })
+        console.log(doc);
 
         res.status(200).json({
             status: "success",

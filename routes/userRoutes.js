@@ -7,6 +7,7 @@ const {
     protect,
     updatePassword,
     logout,
+    userValidator,
 } = require("../controllers/authController");
 
 const userRouter = express.Router();
@@ -18,6 +19,7 @@ userRouter.post("/forgotpassword", forgotPassword);
 userRouter.patch("/resetpassword/:token", resetPassword);
 
 userRouter.use(protect);
+userRouter.get('/validate',userValidator)
 userRouter.patch("/updatePassword", updatePassword);
 userRouter.get("/logout", logout);
 

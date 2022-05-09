@@ -4,6 +4,7 @@ const Product = require("../models/productModel");
 const { catchAsync } = require("../utils/catchAsync");
 const fs = require("fs");
 const https = require("https");
+const { getAll, updateOne } = require("./handleFactory");
 
 function generateInvoice(invoice, filename, success, error) {
     var postData = JSON.stringify(invoice);
@@ -66,35 +67,50 @@ exports.placeOrder = catchAsync(async (req, res, next) => {
             },
         });
         next();
+    } else {
+        // if available create new order document
+
+        const newOrder = await Order.create({ ...order, userId: req.user._id });
+
+        // subtract from stock
+        await Promise.all(
+            cart.products.map((ele) => {
+                return Product.findByIdAndUpdate(ele.product, {
+                    $inc: { stock: outOfStockItems.length ? 0 : -ele.quantity },
+                });
+            })
+        );
+
+        res.status(202).json({
+            status: "success",
+            data: { _id: newOrder._id },
+        });
     }
-    // if available create new order document
-
-    const newOrder = await Order.create({ ...order, userId: req.user._id });
-
-    // subtract from stock
-    await Promise.all(
-        cart.products.map((ele) => {
-            return Product.findByIdAndUpdate(ele.product, {
-                $inc: { stock: outOfStockItems.length ? 0 : -ele.quantity },
-            });
-        })
-    );
-
-    res.status(202).json({
-        status: "success",
-        data: { _id: newOrder._id },
-    });
 });
 
 exports.getUserOrders = catchAsync(async (req, res, next) => {
-    const orders = await Order.find({ userId: req.user._id }).select({_id:1,orderStatus:1,createdAt:1,totalPrice:1,invoice:1});
+    const orders = await Order.find({ userId: req.user._id }).select({
+        _id: 1,
+        orderStatus: 1,
+        createdAt: 1,
+        totalPrice: 1,
+        invoice: 1,
+    });
     res.status(200).json({
         status: "success",
         data: {
-            orders:{
-                inProgress: orders.filter((order)=> order.orderStatus!='Delivered' && order.orderStatus!='Cancelled'),
-                completed: orders.filter((order)=> order.orderStatus==='Delivered' || order.orderStatus==='Cancelled')
-            }
+            orders: {
+                inProgress: orders.filter(
+                    (order) =>
+                        order.orderStatus != "Delivered" &&
+                        order.orderStatus != "Cancelled"
+                ),
+                completed: orders.filter(
+                    (order) =>
+                        order.orderStatus === "Delivered" ||
+                        order.orderStatus === "Cancelled"
+                ),
+            },
         },
     });
 });
@@ -219,3 +235,6 @@ exports.getOrderById = catchAsync(async (req, res, next) => {
         },
     });
 });
+
+exports.getAllOrders = getAll(Order);
+exports.moveStage = updateOne(Order);

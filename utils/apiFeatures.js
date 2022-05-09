@@ -8,7 +8,6 @@ class APIFeatures {
         const queryObj = { ...this.queryString };
         if (queryObj.primaryCategory)
             queryObj.primaryCategory = queryObj.primaryCategory.split(",");
-        console.log(queryObj);
 
         const excludedFields = ["page", "sort", "limit", "fields"];
         excludedFields.forEach((el) => delete queryObj[el]);
@@ -19,7 +18,6 @@ class APIFeatures {
             /\b(gte|gt|lt|lte)\b/g,
             (match) => `$${match}`
         );
-        console.log(JSON.parse(queryStr));
         this.query.find(JSON.parse(queryStr));
         return this;
     }
@@ -27,6 +25,7 @@ class APIFeatures {
     sort() {
         // 2 SORTING 127.0.0.1:3000/api/v1/tours?sort=-price,ratingsAverage (-ve for descending order)
         if (this.queryString.sort) {
+            console.log(this.queryString.sort);
             this.query = this.query.sort(
                 this.queryString.sort.split(",").join(" ")
             ); // (split join) as sort method needs a string like 'price ratingsAverage'
