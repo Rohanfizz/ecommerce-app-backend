@@ -77,6 +77,7 @@ exports.placeOrder = catchAsync(async (req, res, next) => {
             cart.products.map((ele) => {
                 return Product.findByIdAndUpdate(ele.product, {
                     $inc: { stock: outOfStockItems.length ? 0 : -ele.quantity },
+                    $inc: { sold: outOfStockItems.length ? 0 : ele.quantity },
                 });
             })
         );

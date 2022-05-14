@@ -18,6 +18,25 @@ exports.deleteOne = (Model) =>
 
 exports.updateOne = (Model) =>
     catchAsync(async (req, res, next) => {
+        // console.log(req.body);
+        const doc = await Model.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+            runValidators: true,
+        });
+        if (!doc) {
+            return next(new AppError("No document found with that ID", 404));
+        }
+
+        res.status(200).json({
+            status: "success",
+            data: {
+                doc,
+            },
+        });
+    });
+
+exports.toggleActive = (Model) =>
+    catchAsync(async (req, res, next) => {
         const doc = await Model.findByIdAndUpdate(req.params.id, req.body, {
             new: true,
             runValidators: true,
@@ -50,12 +69,23 @@ exports.createOne = (Model) =>
 exports.getOne = (Model, popOptions) =>
     catchAsync(async (req, res, next) => {
         // console.log(req.params);
+        // let filter = {};
+        // if (req.params.id) filter = { active: true,_id: };
 
         // const currentTour = Model.find({ _id: req.params.id });
 
-        let query = Model.findById(req.params.id);
+        // let query = Model.findById(req.params.id);
+        const features = new APIFeatures(
+            Model.findById(req.params.id),
+            req.query
+        )
+            .filter()
+            .sort()
+            .limitFields()
+            .paginate();
+        const document = await features.query;
         // if (popOptions) query = query.populate(popOptions);
-        const document = await query;
+        // const document = await query;
 
         if (!document) {
             return next(new AppError("No tour found with that ID", 404));
@@ -63,7 +93,7 @@ exports.getOne = (Model, popOptions) =>
         res.status(200).json({
             status: "success",
             data: {
-                data: document,
+                data: document[0],
             },
         });
     });
@@ -71,24 +101,24 @@ exports.getOne = (Model, popOptions) =>
 exports.getAll = (Model) =>
     catchAsync(async (req, res, next) => {
         let filter = {};
-        if (req.params.id) filter = { active:true  };
+        if (req.params.id) filter = { active: true };
 
         const features = new APIFeatures(Model.find(filter), req.query)
-        .filter()
-        .sort()
-        .limitFields()
-        .paginate();
-        const count = new APIFeatures(Model.find(filter),req.query).counter();
+            .filter()
+            .sort()
+            .limitFields()
+            .paginate();
+        const count = new APIFeatures(Model.find(filter), req.query).counter();
         // const doc = await features.query.explain();
         // console.log(features);
         // const doc = await features.query;
         // const total = await count.query;
-        let doc,total;
-        await Promise.all([features.query, count]).then((values)=>{
+        let doc, total;
+        await Promise.all([features.query, count]).then((values) => {
             doc = values[0];
             total = values[1];
-        })
-        console.log(doc);
+        });
+        // console.log(doc);
 
         res.status(200).json({
             status: "success",

@@ -32,10 +32,12 @@ const productSchema = new mongoose.Schema(
             required: [true, "A Product must have a Original price!"],
             validate: {
                 validator: function (val) {
-                    return val >= this.price;
+                    console.log(val,this.price);
+                    // return val >= this.price;
+                    return true
                 },
                 message:
-                    "Oriinal price should be equal to or above regular price",
+                    "Original price should be equal to or above regular price",
             },
         },
         tax: {
@@ -67,9 +69,20 @@ const productSchema = new mongoose.Schema(
         },
         info: {
             type: mongoose.SchemaTypes.Mixed,
+            select:{_id:-1},
             required: [true, "A product must have Info"],
         },
         tags: [String],
+        sold: {
+            type: Number,
+            default: 0,
+            select: false,
+        },
+        boughtPrice: {
+            type: Number,
+            default: 0,
+            select: false,
+        },
     },
     {
         toJSON: { virtuals: true },
