@@ -44,3 +44,6 @@ cartSchema.pre(/^find/, function (next) {
 
 const Cart = mongoose.model("Cart", cartSchema);
 module.exports = Cart;
+
+let arr  = [];
+
