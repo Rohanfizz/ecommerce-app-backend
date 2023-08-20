@@ -26,7 +26,7 @@
     "scripts": {
         "start": "node server.js",
         "dev": "nodemon -x  server.js",
-        "build": "npx build-node-app app-name",
+        "build": "npm install; npx build-node-app app-name",
         "start:prod": "NODE_ENV=production nodemon -x  server.js",
         "debug": "ndb server.js"
     },
