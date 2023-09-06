@@ -18,7 +18,7 @@ exports.deleteOne = (Model) =>
 
 exports.updateOne = (Model) =>
     catchAsync(async (req, res, next) => {
-        // console.log(req.body);
+        
         const doc = await Model.findByIdAndUpdate(req.params.id, req.body, {
             new: true,
             runValidators: true,
@@ -56,7 +56,6 @@ exports.toggleActive = (Model) =>
 exports.createOne = (Model) =>
     catchAsync(async (req, res, next) => {
         const document = await Model.create(req.body);
-        console.log(document);
 
         res.status(201).json({
             status: "success",
@@ -68,7 +67,7 @@ exports.createOne = (Model) =>
 
 exports.getOne = (Model, popOptions) =>
     catchAsync(async (req, res, next) => {
-        // console.log(req.params);
+        
         // let filter = {};
         // if (req.params.id) filter = { active: true,_id: };
 
@@ -102,24 +101,21 @@ exports.getAll = (Model) =>
     catchAsync(async (req, res, next) => {
         let filter = {};
         if (req.params.id) filter = { active: true };
-
+   
         const features = new APIFeatures(Model.find(filter), req.query)
             .filter()
             .sort()
             .limitFields()
             .paginate();
         const count = new APIFeatures(Model.find(filter), req.query).counter();
-        // const doc = await features.query.explain();
-        // console.log(features);
-        // const doc = await features.query;
-        // const total = await count.query;
+        
         let doc, total;
         await Promise.all([features.query, count]).then((values) => {
             doc = values[0];
             total = values[1];
         });
-        // console.log(doc);
-
+        
+        
         res.status(200).json({
             status: "success",
             total,
